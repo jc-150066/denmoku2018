@@ -1,15 +1,16 @@
 <?php
-$updir = '/var/www/html/uploads/';
-$filename = $_FILES['up_file']['name'];
-$command = 'python GCV_API.py ';
+//$updir = '/var/www/html/uploads/';
+//$filename = $_FILES['up_file']['name'];
+//$command = 'python GCV_API.py ';
 
-function br(){
-echo nl2br("\n");//<br />tag send
-}
+//function br(){
+//echo nl2br("\n");//<br />tag send
+//}
 
 //up file src
-move_uploaded_file($_FILES['up_file']['tmp_name'],$updir.$filename);
+//move_uploaded_file($_FILES['up_file']['tmp_name'],$updir.$filename);
 ?>
+
 <?php
 // ファイルのパス
 $filepath ='result.txt';
@@ -28,3 +29,4 @@ header('Content-Disposition: attachment; filename="'.$filename.'"');
 
 // ファイルを読み込みダウンロードを実行
 readfile($filepath);
+?>
